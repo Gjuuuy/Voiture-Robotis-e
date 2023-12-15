@@ -1,0 +1,2 @@
+distance.c:28:6:HCSR04_init	16	static
+distance.c:45:10:HCSR04_get_distance	16	static

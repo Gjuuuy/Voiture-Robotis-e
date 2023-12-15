@@ -1,0 +1,6 @@
+motors.c:30:6:MOTOR_init	8	static
+motors.c:41:6:MOTOR_turn_right	8	static
+motors.c:53:6:MOTOR_move_forward	8	static
+motors.c:66:6:MOTOR_turn_left	8	static
+motors.c:79:6:MOTOR_stop	8	static
+motors.c:91:6:MOTOR_move_backward	8	static
