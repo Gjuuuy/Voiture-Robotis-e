@@ -65,7 +65,11 @@ static HAL_StatusTypeDef HCSR04_compute_distance(uint8_t id);
 static void HCSR04_trig(uint8_t id);
 static void HCSR04_RunTimerUs(void);
 static uint32_t HCSR04_ReadTimerUs(void);
-
+static uint16_t distance;
+uint16_t getDistance(void){
+	//HCSR04_demo_state_machine();
+	return distance;
+}
 
 
 /*
@@ -91,7 +95,7 @@ void HCSR04_demo_state_machine(void)
 	static state_e state = INIT;
 	static uint32_t tlocal;
 	static uint8_t id_sensor;
-	uint16_t distance;
+	//uint16_t distance;
 
 	//ne pas oublier d'appeler en tche de fond cette fonction.
 	HCSR04_process_main();

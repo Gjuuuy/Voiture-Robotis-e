@@ -19,6 +19,7 @@ HAL_StatusTypeDef HCSR04_get_value(uint8_t id, uint16_t * distance);
 void HCSR04_run_measure(uint8_t id);
 
 void HCSR04_process_main(void);
+uint16_t getDistance(void);
 
 #endif
 #endif /* HCSR04_H_ */

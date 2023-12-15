@@ -42,7 +42,7 @@ void MOTOR_turn_right(void){
 
 	MOTOR_set_duty(left_motor_id, VITESSE_TOURNER);
 	MOTOR_set_duty(right_motor_id, -VITESSE_TOURNER);
-	HAL_Delay(1000);
+	HAL_Delay(500);
 
 }
 
@@ -67,7 +67,7 @@ void MOTOR_turn_left(void){
 
 	MOTOR_set_duty(left_motor_id, -VITESSE_TOURNER);
 	MOTOR_set_duty(right_motor_id, VITESSE_TOURNER);
-	HAL_Delay(1000);
+	HAL_Delay(500);
 
 }
 

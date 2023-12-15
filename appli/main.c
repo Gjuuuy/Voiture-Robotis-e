@@ -104,7 +104,7 @@ int main(void)
 				BuzzerOff();
 			}
 			MOTOR_move_forward();
-			if(HCSR04_get_distance() < 200){
+			if(getDistance() < 50){
 				MOTOR_turn_right();
 				//affiche_yeux();
 				printf("\nDistance inférieure a 200\n");
