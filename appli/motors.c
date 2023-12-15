@@ -4,8 +4,8 @@
 #include "stm32f1_motorDC.h"
 
 
-#define VITESSE_AVANCER 600
-#define VITESSE_TOURNER 450
+#define VITESSE_AVANCER 900
+#define VITESSE_TOURNER 700
 #define VITESSE_STOP 0
 
 #define RIGHT_MOTOR_R1_GPIO          GPIOB

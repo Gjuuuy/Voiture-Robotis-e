@@ -2648,7 +2648,7 @@ void MOTOR_turn_right(void){
 	MOTOR_set_duty(left_motor_id, VITESSE_TOURNER);
  8001700:	4b0a      	ldr	r3, [pc, #40]	; (800172c <MOTOR_turn_right+0x30>)
  8001702:	f993 3000 	ldrsb.w	r3, [r3]
- 8001706:	f44f 71e1 	mov.w	r1, #450	; 0x1c2
+ 8001706:	f44f 712f 	mov.w	r1, #700	; 0x2bc
  800170a:	4618      	mov	r0, r3
  800170c:	f000 fdea 	bl	80022e4 <MOTOR_set_duty>
 	MOTOR_set_duty(right_motor_id, -VITESSE_TOURNER);
@@ -2667,7 +2667,7 @@ void MOTOR_turn_right(void){
  800172a:	bf00      	nop
  800172c:	20000aa6 	.word	0x20000aa6
  8001730:	20000aa7 	.word	0x20000aa7
- 8001734:	fffffe3e 	.word	0xfffffe3e
+ 8001734:	fffffd44 	.word	0xfffffd44
 
 08001738 <MOTOR_move_forward>:
 
@@ -2682,13 +2682,13 @@ void MOTOR_move_forward(void){
 	MOTOR_set_duty(left_motor_id, VITESSE_AVANCER);
  800173c:	4b0a      	ldr	r3, [pc, #40]	; (8001768 <MOTOR_move_forward+0x30>)
  800173e:	f993 3000 	ldrsb.w	r3, [r3]
- 8001742:	f44f 7116 	mov.w	r1, #600	; 0x258
+ 8001742:	f44f 7161 	mov.w	r1, #900	; 0x384
  8001746:	4618      	mov	r0, r3
  8001748:	f000 fdcc 	bl	80022e4 <MOTOR_set_duty>
 	MOTOR_set_duty(right_motor_id, VITESSE_AVANCER);
  800174c:	4b07      	ldr	r3, [pc, #28]	; (800176c <MOTOR_move_forward+0x34>)
  800174e:	f993 3000 	ldrsb.w	r3, [r3]
- 8001752:	f44f 7116 	mov.w	r1, #600	; 0x258
+ 8001752:	f44f 7161 	mov.w	r1, #900	; 0x384
  8001756:	4618      	mov	r0, r3
  8001758:	f000 fdc4 	bl	80022e4 <MOTOR_set_duty>
 	HAL_Delay(1000);
@@ -2720,7 +2720,7 @@ void MOTOR_turn_left(void){
 	MOTOR_set_duty(right_motor_id, VITESSE_TOURNER);
  8001782:	4b09      	ldr	r3, [pc, #36]	; (80017a8 <MOTOR_turn_left+0x38>)
  8001784:	f993 3000 	ldrsb.w	r3, [r3]
- 8001788:	f44f 71e1 	mov.w	r1, #450	; 0x1c2
+ 8001788:	f44f 712f 	mov.w	r1, #700	; 0x2bc
  800178c:	4618      	mov	r0, r3
  800178e:	f000 fda9 	bl	80022e4 <MOTOR_set_duty>
 	HAL_Delay(1000);
@@ -2732,7 +2732,7 @@ void MOTOR_turn_left(void){
  800179c:	bd80      	pop	{r7, pc}
  800179e:	bf00      	nop
  80017a0:	20000aa6 	.word	0x20000aa6
- 80017a4:	fffffe3e 	.word	0xfffffe3e
+ 80017a4:	fffffd44 	.word	0xfffffd44
  80017a8:	20000aa7 	.word	0x20000aa7
 
 080017ac <MOTOR_stop>:
@@ -2797,7 +2797,7 @@ void MOTOR_move_backward(void){
  8001808:	bf00      	nop
  800180a:	bd80      	pop	{r7, pc}
  800180c:	20000aa6 	.word	0x20000aa6
- 8001810:	fffffda8 	.word	0xfffffda8
+ 8001810:	fffffc7c 	.word	0xfffffc7c
  8001814:	20000aa7 	.word	0x20000aa7
 
 08001818 <__NVIC_EnableIRQ>:
