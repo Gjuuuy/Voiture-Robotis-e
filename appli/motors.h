@@ -1,9 +1,11 @@
 /**
- * motor.h
- *
- *  Created on: 22 November 2023
- *      Author: A. Sako
- */
+  ******************************************************************************
+  * @file    motors.h
+  * @author  Abdoulaye
+  * @date    22-November-2023
+  * @brief   Contient les fonctions publiques de motors.c
+  ******************************************************************************
+*/
 
 #include "macro_types.h"
 #include "stdint.h"

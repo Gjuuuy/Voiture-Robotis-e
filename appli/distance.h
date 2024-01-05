@@ -1,9 +1,12 @@
-/*
- * distance.h
- *
- *  Created on: 29 nov 2023
- *      Author: Abdoulaye
- */
+/**
+  ******************************************************************************
+  * @file    distance.h
+  * @author  Abdoulaye
+  * @date    29-November-2023
+  * @brief   Contient les fonctions publiques de distance.c
+  ******************************************************************************
+*/
+
 
 #include "config.h"
 

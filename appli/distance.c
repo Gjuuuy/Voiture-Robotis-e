@@ -1,3 +1,13 @@
+/**
+  ******************************************************************************
+  * @file    distance.c
+  * @author  Abdoulaye
+  * @date    29-November-2023
+  * @brief   Contient les fonctions utilisables par le HCSR04
+  ******************************************************************************
+*/
+
+
 #include "config.h"
 #include "HCSR04.h"
 #include "macro_types.h"
@@ -37,9 +47,9 @@ void HCSR04_init(void){
 }
 
 /**
- * @brief Calcul de la distance mésurée par le capteur de distance
+ * @brief Calcul de la distance mesure par le capteur de distance
  * @pre Initialisation du capteur HC-SR04
- * @retval valeur en 16 bits de la distance mésurée par le capteur de distance
+ * @retval valeur en 16 bits de la distance mesuree par le capteur de distance
  */
 
 uint16_t HCSR04_get_distance(void){

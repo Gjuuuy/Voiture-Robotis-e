@@ -1,3 +1,13 @@
+/**
+  ******************************************************************************
+  * @file    ecran.c
+  * @author  Dorian
+  * @date    22-November-2023
+  * @brief   Contient les fonctions utilisable par l'ecran TFT
+  ******************************************************************************
+*/
+
+
 #include "tft_ili9341/stm32f1_ili9341.h"
 #include "ecran.h"
 #include "stm32f1xx_hal.h"
@@ -44,7 +54,7 @@ for(int i = 0; i < eye; i ++){
  * @pre Initialise l'ecran
  */
 
-void visage_robot(void){
+void yeux_robot(void){
 
 	  ILI9341_DrawCircle(70,70,50,ILI9341_COLOR_WHITE);
 	  ILI9341_DrawCircle(70,250,50,ILI9341_COLOR_WHITE);

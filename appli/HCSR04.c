@@ -13,6 +13,7 @@
 #include "stm32f1_timer.h"
 #include "stm32f1_gpio.h"
 #include "stm32f1_extit.h"
+#include "motors.h"
 
 #ifndef HCSR04_NB_SENSORS
 	#define HCSR04_NB_SENSORS	5
@@ -66,8 +67,7 @@ static void HCSR04_trig(uint8_t id);
 static void HCSR04_RunTimerUs(void);
 static uint32_t HCSR04_ReadTimerUs(void);
 static uint16_t distance;
-uint16_t getDistance(void){
-	//HCSR04_demo_state_machine();
+uint16_t getDistance(){
 	return distance;
 }
 
@@ -95,7 +95,7 @@ void HCSR04_demo_state_machine(void)
 	static state_e state = INIT;
 	static uint32_t tlocal;
 	static uint8_t id_sensor;
-	//uint16_t distance;
+	uint16_t distanceMesure;
 
 	//ne pas oublier d'appeler en tche de fond cette fonction.
 	HCSR04_process_main();
@@ -128,6 +128,8 @@ void HCSR04_demo_state_machine(void)
 					break;
 				case HAL_OK:
 					printf("sensor %d - distance : %d\n", id_sensor, distance);
+					distanceMesure = distance;
+					printf("%d\n", distanceMesure);
 					state = WAIT_BEFORE_NEXT_MEASURE;
 					break;
 				case HAL_ERROR:
@@ -142,7 +144,8 @@ void HCSR04_demo_state_machine(void)
 			}
 			break;
 		case WAIT_BEFORE_NEXT_MEASURE:
-			if(HAL_GetTick() > tlocal + PERIOD_MEASURE)
+			//if(HAL_GetTick() > tlocal + PERIOD_MEASURE)
+			if(HAL_GetTick() > PERIOD_MEASURE)
 				state = LAUNCH_MEASURE;
 			break;
 		default:

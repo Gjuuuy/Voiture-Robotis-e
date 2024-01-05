@@ -1,9 +1,12 @@
-/*
- * buzzer.h
- *
- *  Created on: 17 nov 2023
- *      Author: Abdoulaye
- */
+/**
+  ******************************************************************************
+  * @file    buzzer.c
+  * @author  Abdoulaye
+  * @date    17-November-2023
+  * @brief   Contient les fonctions utilise par le buzzer
+  ******************************************************************************
+*/
+
 
 #include "stm32f1xx_hal.h"
 #include "stm32f1_gpio.h"
@@ -15,7 +18,7 @@
 #define BUZZER_PIN          GPIO_PIN_1
 
 
-/*
+/**
  * @brief Fais sonner le buzzer
  */
 void BuzzerOn(void){
@@ -23,7 +26,7 @@ void BuzzerOn(void){
 	HAL_Delay(500);
 }
 
-/*
+/**
  * @brief Arrete de faire sonner le buzzer
  */
 void BuzzerOff(void){

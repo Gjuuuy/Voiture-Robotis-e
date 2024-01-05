@@ -1,3 +1,14 @@
+/**
+  ******************************************************************************
+  * @file    motors.c
+  * @author  Abdoulaye
+  * @date    22-November-2023
+  * @brief   Contient les fonctions utilisable par le moteur JGA25-370.
+  ******************************************************************************
+*/
+
+
+
 #include "stm32f1_uart.h"
 #include "stm32f1_sys.h"
 #include "stm32f1_gpio.h"
@@ -34,7 +45,7 @@ void MOTOR_init(void){
 }
 
 /**
- * @brief Fais tourner le robot à droite
+ * @brief Fais tourner le robot a droite
  * @pre Initialisation des moteurs
  */
 
@@ -42,7 +53,7 @@ void MOTOR_turn_right(void){
 
 	MOTOR_set_duty(left_motor_id, VITESSE_TOURNER);
 	MOTOR_set_duty(right_motor_id, -VITESSE_TOURNER);
-	HAL_Delay(500);
+	HAL_Delay(750);
 
 }
 
@@ -59,7 +70,7 @@ void MOTOR_move_forward(void){
 }
 
 /**
- * @brief Fais tourner le robot à gauche
+ * @brief Fais tourner le robot a gauche
  * @pre Initialisation des moteurs
  */
 
@@ -67,12 +78,12 @@ void MOTOR_turn_left(void){
 
 	MOTOR_set_duty(left_motor_id, -VITESSE_TOURNER);
 	MOTOR_set_duty(right_motor_id, VITESSE_TOURNER);
-	HAL_Delay(500);
+	HAL_Delay(750);
 
 }
 
 /**
- * @brief Arrête le mouvement du robot
+ * @brief Arrete le mouvement du robot
  * @pre Initialisation des moteurs
  */
 

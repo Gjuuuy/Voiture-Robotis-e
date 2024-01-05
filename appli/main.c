@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
   * @file    main.c
-  * @author  Nirgal
-  * @date    03-July-2019
+  * @author  Abdoulaye
+  * @date    29-December-2023
   * @brief   Default main function.
   ******************************************************************************
 */
@@ -19,7 +19,7 @@
 #include "ecran.h"
 #include "HCSR04.h"
 
-
+static uint16_t distanceMesuree;
 
 void writeLED(bool_e b)
 {
@@ -37,6 +37,82 @@ void process_ms(void)
 	if(t)
 		t--;
 }
+
+void state_machine(void){
+		typedef enum{
+				INIT,
+				MODE_AUTO,
+				MODE_MANU,
+				ERROR
+			}state_e;
+
+			static state_e state = INIT;
+			static state_e previous_state = INIT;
+			bool_e entrance;
+			entrance = (state != previous_state)?TRUE:FALSE;
+			char c;
+			previous_state = state;
+			c = UART_getc(UART2_ID);
+
+			switch(state){
+
+			case INIT:
+				printf("Mode initialisation\n");
+				MOTOR_init();
+				ECRAN_init();
+				HCSR04_init();
+
+				Systick_add_callback_function(&process_ms);
+
+				state = MODE_AUTO;
+				break;
+
+			case MODE_AUTO:
+				if(entrance){
+					printf("Mode auto active\n");
+					//Affichage de quelque chose sur l'écran
+					BuzzerOn();
+					BuzzerOff();
+				}
+				if(HCSR04_get_distance() < 350){
+					//printf("%d\n", HCSR04_get_distance());
+					MOTOR_turn_right();
+				}else{
+					MOTOR_move_forward();
+					//printf("%d\n", HCSR04_get_distance());
+				}
+				if(c == 'A')
+					state = MODE_MANU;
+				break;
+
+			case MODE_MANU:
+				if(entrance){
+					printf("Mode manuel");
+					//Affichage de quelque chose sur l'écran
+					BuzzerOn();
+					BuzzerOff();
+					MOTOR_stop();
+				}
+				//c = UART_getc(UART2_ID);
+				if(c == 'F')
+					MOTOR_move_forward();
+				else if(c == 'B')
+					MOTOR_move_backward();
+				else if(c == 'L')
+					MOTOR_turn_left();
+				else if(c == 'R')
+					MOTOR_turn_right();
+				else if(c == 'S')
+					MOTOR_stop();
+				else if(c == 'E')
+					state = MODE_AUTO;
+				break;
+			case ERROR:
+				break;
+			default: break;
+
+			}
+	}
 
 
 int main(void)
@@ -65,78 +141,22 @@ int main(void)
 	//On ajoute la fonction process_ms à la liste des fonctions appelées automatiquement chaque ms par la routine d'interruption du périphérique SYSTICK
 	Systick_add_callback_function(&process_ms);
 	//Ajouter dans la fonction main(), juste avant la boucle while(1) de tache de fond
+	//ECRAN_init();
+	HCSR04_init();
+	MOTOR_init();
 
 	while(1)	//boucle de tâche de fond
 	{
 
-		typedef enum{
-			INIT,
-			MODE_AUTO,
-			MODE_MANU,
-			ERROR
-		}state_e;
-
-		static state_e state = INIT;
-		static state_e previous_state = INIT;
-		bool_e entrance;
-		entrance = (state != previous_state)?TRUE:FALSE;
-		char c;
-		previous_state = state;
-		c = UART_getc(UART2_ID);
-
-		switch(state){
-
-		case INIT:
-			printf("Mode initialisation\n");
-			MOTOR_init();
-			ECRAN_init();
-			HCSR04_init();
-
-			Systick_add_callback_function(&process_ms);
-
-			state = MODE_AUTO;
-			break;
-		case MODE_AUTO:
-			if(entrance){
-				printf("Mode auto active\n");
-				//Affichage de quelque chose sur l'écran
-				BuzzerOn();
-				BuzzerOff();
-			}
+		/*if(HCSR04_get_distance() < 350){
+			printf("%d\n", HCSR04_get_distance());
+			MOTOR_turn_right();
+		}else{
 			MOTOR_move_forward();
-			if(getDistance() < 50){
-				MOTOR_turn_right();
-				//affiche_yeux();
-				printf("\nDistance inférieure a 200\n");
-			}
-
-			if(c == 'A')
-				state = MODE_MANU;
-			break;
-		case MODE_MANU:
-			if(entrance){
-				printf("Mode auto manuel");
-				//Affichage de quelque chose sur l'écran
-				BuzzerOn();
-				BuzzerOff();
-				MOTOR_stop();
-			}
-			//c = UART_getc(UART2_ID);
-			if(c == 'F')
-				MOTOR_move_forward();
-			else if(c == 'B')
-				MOTOR_move_backward();
-			else if(c == 'L')
-				MOTOR_turn_left();
-			else if(c == 'R')
-				MOTOR_turn_right();
-			else if(c == 'E')
-				state = MODE_AUTO;
-			break;
-		case ERROR:
-			break;
-		default: break;
-
-		}
+			printf("%d\n", HCSR04_get_distance());
+		}*/
+		state_machine();
 	}
+
+
 }
