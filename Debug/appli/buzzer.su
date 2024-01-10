@@ -1,2 +1,2 @@
-buzzer.c:21:6:BuzzerOn	8	static
-buzzer.c:29:6:BuzzerOff	8	static
+buzzer.c:24:6:BuzzerOn	8	static
+buzzer.c:32:6:BuzzerOff	8	static

@@ -95,7 +95,7 @@ void HCSR04_demo_state_machine(void)
 	static state_e state = INIT;
 	static uint32_t tlocal;
 	static uint8_t id_sensor;
-	uint16_t distanceMesure;
+	//uint16_t distanceMesure;
 
 	//ne pas oublier d'appeler en tche de fond cette fonction.
 	HCSR04_process_main();
@@ -128,8 +128,8 @@ void HCSR04_demo_state_machine(void)
 					break;
 				case HAL_OK:
 					printf("sensor %d - distance : %d\n", id_sensor, distance);
-					distanceMesure = distance;
-					printf("%d\n", distanceMesure);
+					//distanceMesure = distance;
+					//printf("%d\n", distanceMesure);
 					state = WAIT_BEFORE_NEXT_MEASURE;
 					break;
 				case HAL_ERROR:
@@ -144,8 +144,8 @@ void HCSR04_demo_state_machine(void)
 			}
 			break;
 		case WAIT_BEFORE_NEXT_MEASURE:
-			//if(HAL_GetTick() > tlocal + PERIOD_MEASURE)
-			if(HAL_GetTick() > PERIOD_MEASURE)
+			if(HAL_GetTick() > tlocal + PERIOD_MEASURE)
+			//if(HAL_GetTick() > PERIOD_MEASURE)
 				state = LAUNCH_MEASURE;
 			break;
 		default:

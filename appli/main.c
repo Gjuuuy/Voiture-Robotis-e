@@ -147,15 +147,15 @@ int main(void)
 
 	while(1)	//boucle de tâche de fond
 	{
-
-		/*if(HCSR04_get_distance() < 350){
-			printf("%d\n", HCSR04_get_distance());
+		HCSR04_demo_state_machine();
+		/*if(getDistance() < 30){
+			printf("%d\n", getDistance());
 			MOTOR_turn_right();
 		}else{
 			MOTOR_move_forward();
 			printf("%d\n", HCSR04_get_distance());
 		}*/
-		state_machine();
+		//state_machine();
 	}
 
 

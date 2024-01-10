@@ -1,3 +1,3 @@
-ecran.c:12:6:ECRAN_init	8	static
-ecran.c:22:6:affiche_yeux	16	static
-ecran.c:47:6:yeux_robot	16	static
+ecran.c:22:6:ECRAN_init	8	static
+ecran.c:32:6:affiche_yeux	16	static
+ecran.c:57:6:yeux_robot	16	static
