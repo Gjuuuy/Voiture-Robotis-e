@@ -10,7 +10,9 @@ C_SRCS += \
 ../appli/distance.c \
 ../appli/ecran.c \
 ../appli/main.c \
-../appli/motors.c 
+../appli/motors.c \
+../appli/testBluetooth.c \
+../appli/testDistance.c 
 
 S_UPPER_SRCS += \
 ../appli/assembleur.S 
@@ -22,7 +24,9 @@ OBJS += \
 ./appli/distance.o \
 ./appli/ecran.o \
 ./appli/main.o \
-./appli/motors.o 
+./appli/motors.o \
+./appli/testBluetooth.o \
+./appli/testDistance.o 
 
 S_UPPER_DEPS += \
 ./appli/assembleur.d 
@@ -33,7 +37,9 @@ C_DEPS += \
 ./appli/distance.d \
 ./appli/ecran.d \
 ./appli/main.d \
-./appli/motors.d 
+./appli/motors.d \
+./appli/testBluetooth.d \
+./appli/testDistance.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

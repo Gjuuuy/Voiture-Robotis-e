@@ -33,13 +33,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  14 .debug_macro  00019376  00000000  00000000  00039ea0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_line   000130df  00000000  00000000  00053216  2**0
+ 15 .debug_line   000130e5  00000000  00000000  00053216  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_str    00081953  00000000  00000000  000662f5  2**0
+ 16 .debug_str    00081953  00000000  00000000  000662fb  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .comment      00000053  00000000  00000000  000e7c48  2**0
+ 17 .comment      00000053  00000000  00000000  000e7c4e  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  00005ce4  00000000  00000000  000e7c9c  2**2
+ 18 .debug_frame  00005ce4  00000000  00000000  000e7ca4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1825,7 +1825,7 @@ static uint32_t HCSR04_ReadTimerUs(void)
  800120c:	b580      	push	{r7, lr}
  800120e:	af00      	add	r7, sp, #0
 	return TIMER_read(HCSR04_TIMER);
- 8001210:	2000      	movs	r0, #0
+ 8001210:	2001      	movs	r0, #1
  8001212:	f001 fba1 	bl	8002958 <TIMER_read>
  8001216:	4603      	mov	r3, r0
 }
@@ -1841,15 +1841,15 @@ static void HCSR04_RunTimerUs(void)
 	TIMER_run_us(HCSR04_TIMER, 10000, FALSE);
  8001220:	2200      	movs	r2, #0
  8001222:	f242 7110 	movw	r1, #10000	; 0x2710
- 8001226:	2000      	movs	r0, #0
+ 8001226:	2001      	movs	r0, #1
  8001228:	f001 fa4e 	bl	80026c8 <TIMER_run_us>
 	TIMER_set_prescaler(HCSR04_TIMER, HCSR04_PRESCALER_TIMER);
  800122c:	21a0      	movs	r1, #160	; 0xa0
- 800122e:	2000      	movs	r0, #0
+ 800122e:	2001      	movs	r0, #1
  8001230:	f001 fbc8 	bl	80029c4 <TIMER_set_prescaler>
 	TIMER_set_period(HCSR04_TIMER, HCSR04_PERIOD_TIMER);
  8001234:	f649 4140 	movw	r1, #40000	; 0x9c40
- 8001238:	2000      	movs	r0, #0
+ 8001238:	2001      	movs	r0, #1
  800123a:	f001 fba1 	bl	8002980 <TIMER_set_period>
 	timer_is_running = TRUE;
  800123e:	4b02      	ldr	r3, [pc, #8]	; (8001248 <HCSR04_RunTimerUs+0x2c>)
@@ -2088,18 +2088,18 @@ static HAL_StatusTypeDef HCSR04_compute_distance(uint8_t id)
  80013b4:	4413      	add	r3, r2
  80013b6:	015b      	lsls	r3, r3, #5
  80013b8:	60fb      	str	r3, [r7, #12]
-
-	uint32_t freq;
-	if(HCSR04_TIMER == TIMER1_ID)
+			freq *= 2;
+	}
+	else
 	{
-		//Frquence du TIMER1 est PCLK2 lorsque APB2 Prescaler vaut 1, sinon : PCLK2*2
-		freq = HAL_RCC_GetPCLK2Freq();
- 80013ba:	f003 fc4b 	bl	8004c54 <HAL_RCC_GetPCLK2Freq>
+		//Frquence des TIMERS 2,3,4 est PCLK1 lorsque APB1 Prescaler vaut 1, sinon : PCLK1*2
+		freq = HAL_RCC_GetPCLK1Freq();
+ 80013ba:	f003 fc37 	bl	8004c2c <HAL_RCC_GetPCLK1Freq>
  80013be:	60b8      	str	r0, [r7, #8]
-		if((RCC->CFGR & RCC_CFGR_PPRE2) >> 11 != RCC_HCLK_DIV1)
+		if((RCC->CFGR & RCC_CFGR_PPRE1) >> 8 != RCC_HCLK_DIV1)
  80013c0:	4b1f      	ldr	r3, [pc, #124]	; (8001440 <HCSR04_compute_distance+0x134>)
  80013c2:	685b      	ldr	r3, [r3, #4]
- 80013c4:	0adb      	lsrs	r3, r3, #11
+ 80013c4:	0a1b      	lsrs	r3, r3, #8
  80013c6:	f003 0307 	and.w	r3, r3, #7
  80013ca:	2b00      	cmp	r3, #0
  80013cc:	d002      	beq.n	80013d4 <HCSR04_compute_distance+0xc8>
@@ -2107,10 +2107,6 @@ static HAL_StatusTypeDef HCSR04_compute_distance(uint8_t id)
  80013ce:	68bb      	ldr	r3, [r7, #8]
  80013d0:	005b      	lsls	r3, r3, #1
  80013d2:	60bb      	str	r3, [r7, #8]
-		//Frquence des TIMERS 2,3,4 est PCLK1 lorsque APB1 Prescaler vaut 1, sinon : PCLK1*2
-		freq = HAL_RCC_GetPCLK1Freq();
-		if((RCC->CFGR & RCC_CFGR_PPRE1) >> 8 != RCC_HCLK_DIV1)
-			freq *= 2;
 	}
 	freq /= 1000000;	//frquence exprime en MHz
  80013d4:	68bb      	ldr	r3, [r7, #8]

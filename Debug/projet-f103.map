@@ -488,7 +488,7 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 ./appli/distance.o
  .bss.tlocal    0x0000000000000000        0x4 ./appli/distance.o
  .text.HCSR04_get_distance
-                0x0000000000000000       0xf0 ./appli/distance.o
+                0x0000000000000000       0xf4 ./appli/distance.o
  .bss.state.8143
                 0x0000000000000000        0x1 ./appli/distance.o
  .bss.id_sensor.8145
@@ -1029,6 +1029,348 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x16f ./appli/motors.o
  .debug_macro   0x0000000000000000       0x88 ./appli/motors.o
  .debug_macro   0x0000000000000000      0x265 ./appli/motors.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testBluetooth.o
+ .text          0x0000000000000000        0x0 ./appli/testBluetooth.o
+ .data          0x0000000000000000        0x0 ./appli/testBluetooth.o
+ .bss           0x0000000000000000        0x0 ./appli/testBluetooth.o
+ .text.__NVIC_SystemReset
+                0x0000000000000000       0x2c ./appli/testBluetooth.o
+ .rodata        0x0000000000000000       0x6b ./appli/testBluetooth.o
+ .text.testAvancementRobot
+                0x0000000000000000       0x48 ./appli/testBluetooth.o
+ .text.testReculRobot
+                0x0000000000000000       0x48 ./appli/testBluetooth.o
+ .text.testtournerGaucheRobot
+                0x0000000000000000       0x48 ./appli/testBluetooth.o
+ .text.testtournerDroiteRobot
+                0x0000000000000000       0x48 ./appli/testBluetooth.o
+ .text.modeAutoRobot
+                0x0000000000000000       0x48 ./appli/testBluetooth.o
+ .text.modeManuRobot
+                0x0000000000000000       0x48 ./appli/testBluetooth.o
+ .debug_info    0x0000000000000000      0xd80 ./appli/testBluetooth.o
+ .debug_abbrev  0x0000000000000000      0x272 ./appli/testBluetooth.o
+ .debug_aranges
+                0x0000000000000000       0x50 ./appli/testBluetooth.o
+ .debug_ranges  0x0000000000000000       0x40 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x41f ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0xab4 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x1fa ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x28 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x22 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x22 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x8e ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x51 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x103 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x6a ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x1df ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x1c ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x22 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0xc3 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0xd23 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000     0xe09e ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x43 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x174 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x5a ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x5be ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x289 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x1cb ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x114 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x1b2 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x27 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x1bc ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x34 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x3c ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x57 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x46a ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x1b5 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x88 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x241 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x264 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x79 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x141 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x1ef ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0xf2 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x1f4 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x88b ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x26b ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x217 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x89 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x65 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x249 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x83 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x64 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x18 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x35 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x34 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x16 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x35 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x333 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x10 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x16 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x43 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x34 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x10 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x58 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x182 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x10 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x1c ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x52 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x22 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x10 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x40 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0xd5 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x1c ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x3d ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x16 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x16f ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000       0x88 ./appli/testBluetooth.o
+ .debug_macro   0x0000000000000000      0x265 ./appli/testBluetooth.o
+ .debug_line    0x0000000000000000      0xab3 ./appli/testBluetooth.o
+ .debug_str     0x0000000000000000    0x7bc59 ./appli/testBluetooth.o
+ .comment       0x0000000000000000       0x54 ./appli/testBluetooth.o
+ .debug_frame   0x0000000000000000      0x100 ./appli/testBluetooth.o
+ .ARM.attributes
+                0x0000000000000000       0x2d ./appli/testBluetooth.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .group         0x0000000000000000        0xc ./appli/testDistance.o
+ .text          0x0000000000000000        0x0 ./appli/testDistance.o
+ .data          0x0000000000000000        0x0 ./appli/testDistance.o
+ .bss           0x0000000000000000        0x0 ./appli/testDistance.o
+ .text.__NVIC_SystemReset
+                0x0000000000000000       0x2c ./appli/testDistance.o
+ .rodata        0x0000000000000000       0x8a ./appli/testDistance.o
+ .text.testFonctionnementGetDistance
+                0x0000000000000000       0x34 ./appli/testDistance.o
+ .text.testObjetDetectee
+                0x0000000000000000       0x30 ./appli/testDistance.o
+ .text.testObjetNonDetectee
+                0x0000000000000000       0x30 ./appli/testDistance.o
+ .debug_info    0x0000000000000000      0xcd8 ./appli/testDistance.o
+ .debug_abbrev  0x0000000000000000      0x27d ./appli/testDistance.o
+ .debug_aranges
+                0x0000000000000000       0x38 ./appli/testDistance.o
+ .debug_ranges  0x0000000000000000       0x28 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x407 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0xab4 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x1fa ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x28 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x22 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x22 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x8e ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x51 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x103 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x6a ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x1df ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x1c ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x22 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0xc3 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0xd23 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000     0xe09e ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x43 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x174 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x5a ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x5be ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x289 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x1cb ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x114 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x1b2 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x27 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x1bc ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x34 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x3c ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x57 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x46a ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x1b5 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x88 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x241 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x264 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x79 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x141 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x1ef ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0xf2 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x1f4 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x88b ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x26b ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x217 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x89 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x65 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x249 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x83 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x64 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x18 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x35 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x34 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x16 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x35 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x333 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x10 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x16 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x43 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x34 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x10 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x58 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x182 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x10 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x1c ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x52 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x22 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x10 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x40 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0xd5 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x1c ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x3d ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x16 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x16f ./appli/testDistance.o
+ .debug_macro   0x0000000000000000       0x88 ./appli/testDistance.o
+ .debug_macro   0x0000000000000000      0x265 ./appli/testDistance.o
+ .debug_line    0x0000000000000000      0xa07 ./appli/testDistance.o
+ .debug_str     0x0000000000000000    0x7bc08 ./appli/testDistance.o
+ .comment       0x0000000000000000       0x54 ./appli/testDistance.o
+ .debug_frame   0x0000000000000000       0x7c ./appli/testDistance.o
+ .ARM.attributes
+                0x0000000000000000       0x2d ./appli/testDistance.o
  .group         0x0000000000000000        0xc ./lib/bsp/APDS9960/apds9960.o
  .group         0x0000000000000000        0xc ./lib/bsp/APDS9960/apds9960.o
  .group         0x0000000000000000        0xc ./lib/bsp/APDS9960/apds9960.o
@@ -23543,6 +23885,8 @@ LOAD ./appli/distance.o
 LOAD ./appli/ecran.o
 LOAD ./appli/main.o
 LOAD ./appli/motors.o
+LOAD ./appli/testBluetooth.o
+LOAD ./appli/testDistance.o
 LOAD ./lib/bsp/APDS9960/apds9960.o
 LOAD ./lib/bsp/APDS9960/apds9960_algo_color.o
 LOAD ./lib/bsp/BH1750FVI/bh1750fvi.o
@@ -25309,29 +25653,29 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_macro   0x0000000000018eab      0x265 ./lib/hal/src/stm32f1xx_hal_tim_ex.o
  .debug_macro   0x0000000000019110      0x266 ./lib/hal/src/stm32f1xx_hal_uart.o
 
-.debug_line     0x0000000000000000    0x130df
+.debug_line     0x0000000000000000    0x130e5
  .debug_line    0x0000000000000000      0xc81 ./appli/HCSR04.o
- .debug_line    0x0000000000000c81      0x9cb ./appli/distance.o
- .debug_line    0x000000000000164c      0xaa0 ./appli/main.o
- .debug_line    0x00000000000020ec      0x9e7 ./appli/motors.o
- .debug_line    0x0000000000002ad3      0xbfa ./lib/bsp/stm32f1_extit.o
- .debug_line    0x00000000000036cd      0x828 ./lib/bsp/stm32f1_gpio.o
- .debug_line    0x0000000000003ef5      0xe1d ./lib/bsp/stm32f1_motorDC.o
- .debug_line    0x0000000000004d12     0x1080 ./lib/bsp/stm32f1_sys.o
- .debug_line    0x0000000000005d92      0xf1b ./lib/bsp/stm32f1_timer.o
- .debug_line    0x0000000000006cad      0xf4e ./lib/bsp/stm32f1_uart.o
- .debug_line    0x0000000000007bfb      0xecc ./lib/bsp/stm32f1_weak_it.o
- .debug_line    0x0000000000008ac7      0x886 ./lib/bsp/system_stm32f1xx.o
- .debug_line    0x000000000000934d      0xa42 ./lib/bsp/systick.o
- .debug_line    0x0000000000009d8f      0xa7c ./lib/hal/src/stm32f1xx_hal.o
- .debug_line    0x000000000000a80b      0xc6a ./lib/hal/src/stm32f1xx_hal_cortex.o
- .debug_line    0x000000000000b475      0xeda ./lib/hal/src/stm32f1xx_hal_dma.o
- .debug_line    0x000000000000c34f      0xb1c ./lib/hal/src/stm32f1xx_hal_gpio.o
- .debug_line    0x000000000000ce6b      0xe90 ./lib/hal/src/stm32f1xx_hal_rcc.o
- .debug_line    0x000000000000dcfb     0x28cc ./lib/hal/src/stm32f1xx_hal_tim.o
- .debug_line    0x00000000000105c7     0x127b ./lib/hal/src/stm32f1xx_hal_tim_ex.o
- .debug_line    0x0000000000011842     0x1808 ./lib/hal/src/stm32f1xx_hal_uart.o
- .debug_line    0x000000000001304a       0x95 ./lib/startup_stm32f103xb.o
+ .debug_line    0x0000000000000c81      0x9d1 ./appli/distance.o
+ .debug_line    0x0000000000001652      0xaa0 ./appli/main.o
+ .debug_line    0x00000000000020f2      0x9e7 ./appli/motors.o
+ .debug_line    0x0000000000002ad9      0xbfa ./lib/bsp/stm32f1_extit.o
+ .debug_line    0x00000000000036d3      0x828 ./lib/bsp/stm32f1_gpio.o
+ .debug_line    0x0000000000003efb      0xe1d ./lib/bsp/stm32f1_motorDC.o
+ .debug_line    0x0000000000004d18     0x1080 ./lib/bsp/stm32f1_sys.o
+ .debug_line    0x0000000000005d98      0xf1b ./lib/bsp/stm32f1_timer.o
+ .debug_line    0x0000000000006cb3      0xf4e ./lib/bsp/stm32f1_uart.o
+ .debug_line    0x0000000000007c01      0xecc ./lib/bsp/stm32f1_weak_it.o
+ .debug_line    0x0000000000008acd      0x886 ./lib/bsp/system_stm32f1xx.o
+ .debug_line    0x0000000000009353      0xa42 ./lib/bsp/systick.o
+ .debug_line    0x0000000000009d95      0xa7c ./lib/hal/src/stm32f1xx_hal.o
+ .debug_line    0x000000000000a811      0xc6a ./lib/hal/src/stm32f1xx_hal_cortex.o
+ .debug_line    0x000000000000b47b      0xeda ./lib/hal/src/stm32f1xx_hal_dma.o
+ .debug_line    0x000000000000c355      0xb1c ./lib/hal/src/stm32f1xx_hal_gpio.o
+ .debug_line    0x000000000000ce71      0xe90 ./lib/hal/src/stm32f1xx_hal_rcc.o
+ .debug_line    0x000000000000dd01     0x28cc ./lib/hal/src/stm32f1xx_hal_tim.o
+ .debug_line    0x00000000000105cd     0x127b ./lib/hal/src/stm32f1xx_hal_tim_ex.o
+ .debug_line    0x0000000000011848     0x1808 ./lib/hal/src/stm32f1xx_hal_uart.o
+ .debug_line    0x0000000000013050       0x95 ./lib/startup_stm32f103xb.o
 
 .debug_str      0x0000000000000000    0x81953
  .debug_str     0x0000000000000000    0x7bbf1 ./appli/HCSR04.o

@@ -5,6 +5,8 @@
 "./appli/ecran.o"
 "./appli/main.o"
 "./appli/motors.o"
+"./appli/testBluetooth.o"
+"./appli/testDistance.o"
 "./lib/bsp/APDS9960/apds9960.o"
 "./lib/bsp/APDS9960/apds9960_algo_color.o"
 "./lib/bsp/BH1750FVI/bh1750fvi.o"

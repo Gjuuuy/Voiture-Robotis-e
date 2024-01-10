@@ -21,13 +21,14 @@
 #include "HCSR04.h"
 
 
-HAL_Init();
+
 
 
 /**
  * @brief Test pour verifier si le capteur recoie 'F' pour avancer
  */
 void testAvancementRobot(void){
+	HAL_Init();
 	HCSR04_init();
 	UART_init(UART2_ID,115200);
 	char c = UART_getc(UART2_ID);
@@ -39,6 +40,7 @@ void testAvancementRobot(void){
  * @brief Test pour verifier si le capteur recoie 'B' pour reculer
  */
 void testReculRobot(void){
+	HAL_Init();
 	HCSR04_init();
 	UART_init(UART2_ID,115200);
 	char c = UART_getc(UART2_ID);
@@ -50,6 +52,7 @@ void testReculRobot(void){
  * @brief Test pour verifier si le capteur recioe 'L' pour tourner à gauche
  */
 void testtournerGaucheRobot(void){
+	HAL_Init();
 	HCSR04_init();
 	UART_init(UART2_ID,115200);
 	char c = UART_getc(UART2_ID);
@@ -60,6 +63,7 @@ void testtournerGaucheRobot(void){
  * @brief Test pour verifier si le capteur recoie 'R' pour tourner à droite
  */
 void testtournerDroiteRobot(void){
+	HAL_Init();
 	HCSR04_init();
 	UART_init(UART2_ID,115200);
 	char c = UART_getc(UART2_ID);
@@ -71,6 +75,7 @@ void testtournerDroiteRobot(void){
  * @brief Test pour verifier si le capteur recoie 'E' pour passer en mode automatique
  */
 void modeAutoRobot(void){
+	HAL_Init();
 	HCSR04_init();
 	UART_init(UART2_ID,115200);
 	char c = UART_getc(UART2_ID);
@@ -82,6 +87,7 @@ void modeAutoRobot(void){
  * @brief Test pour verifier si le capteur recoie 'A' pour passer en mode manuel
  */
 void modeManuRobot(void){
+	HAL_Init();
 	HCSR04_init();
 	UART_init(UART2_ID,115200);
 	char c = UART_getc(UART2_ID);

@@ -19,7 +19,7 @@
 	#define HCSR04_NB_SENSORS	5
 #endif
 #ifndef HCSR04_TIMER
-	#define HCSR04_TIMER		TIMER1_ID
+	#define HCSR04_TIMER		TIMER2_ID
 #endif
 
 //En cas d'absence de mesure, certains HCSR04 prsentent un cho de l'ordre de 130ms.

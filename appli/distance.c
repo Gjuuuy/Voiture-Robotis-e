@@ -108,5 +108,6 @@ uint16_t HCSR04_get_distance(void){
 				default:
 					break;
 			}
+			return 0;
 
 }
