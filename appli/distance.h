@@ -13,4 +13,4 @@
 
 void HCSR04_init(void);
 
-uint16_t HCSR04_get_distance(void);
+void HCSR04_mode_auto(void);

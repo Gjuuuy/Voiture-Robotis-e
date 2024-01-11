@@ -26,7 +26,7 @@ appli/distance.o: ../appli/distance.c ../appli/config.h \
  ../lib/hal/inc/stm32f1xx_hal_hcd.h ../appli/HCSR04.h \
  ../lib/bsp/macro_types.h ../lib/bsp/stm32f1_timer.h \
  ../lib/bsp/macro_types.h ../appli/config.h ../lib/bsp/stm32f1_gpio.h \
- ../lib/bsp/stm32f1_extit.h
+ ../lib/bsp/stm32f1_extit.h ../appli/motors.h
 
 ../appli/config.h:
 
@@ -129,3 +129,5 @@ appli/distance.o: ../appli/distance.c ../appli/config.h \
 ../lib/bsp/stm32f1_gpio.h:
 
 ../lib/bsp/stm32f1_extit.h:
+
+../appli/motors.h:

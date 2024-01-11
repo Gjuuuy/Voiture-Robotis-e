@@ -66,10 +66,10 @@ static HAL_StatusTypeDef HCSR04_compute_distance(uint8_t id);
 static void HCSR04_trig(uint8_t id);
 static void HCSR04_RunTimerUs(void);
 static uint32_t HCSR04_ReadTimerUs(void);
-static uint16_t distance;
-uint16_t getDistance(){
+
+/*uint16_t getDistance(){
 	return distance;
-}
+}*/
 
 
 /*
@@ -80,7 +80,7 @@ uint16_t getDistance(){
  * @post cette fonction effectue des mesures rgulires avec un capteur HCSR04 plac sur les ports PC7 (Trig) et PB6 (Echo)
  * @note cette fonction n'utilise que des fonctions publiques. Elle peut donc tre duplique  l'extrieur de ce module logiciel.
  */
-void HCSR04_demo_state_machine(void)
+HAL_StatusTypeDef HCSR04_get_distance(uint8_t id_sensor)
 {
 	typedef enum
 	{
@@ -94,8 +94,9 @@ void HCSR04_demo_state_machine(void)
 
 	static state_e state = INIT;
 	static uint32_t tlocal;
-	static uint8_t id_sensor;
-	//uint16_t distanceMesure;
+	uint16_t distance;
+	HAL_StatusTypeDef ret;
+	//uint16_t distance;
 
 	//ne pas oublier d'appeler en tche de fond cette fonction.
 	HCSR04_process_main();
@@ -121,14 +122,15 @@ void HCSR04_demo_state_machine(void)
 			state = WAIT_DURING_MEASURE;
 			break;
 		case WAIT_DURING_MEASURE:
-			switch(HCSR04_get_value(id_sensor, &distance))
+			ret = HCSR04_get_value(id_sensor, &distance);
+			switch(ret)
 			{
 				case HAL_BUSY:
 					//rien  faire... on attend...
 					break;
 				case HAL_OK:
 					printf("sensor %d - distance : %d\n", id_sensor, distance);
-					//distanceMesure = distance;
+					distance = sensors[id_sensor].distance;
 					//printf("%d\n", distanceMesure);
 					state = WAIT_BEFORE_NEXT_MEASURE;
 					break;
@@ -151,6 +153,7 @@ void HCSR04_demo_state_machine(void)
 		default:
 			break;
 	}
+	return ret;
 }
 
 /*

@@ -58,9 +58,9 @@ void state_machine(void){
 
 			case INIT:
 				printf("Mode initialisation\n");
-				MOTOR_init();
+				//MOTOR_init();
 				ECRAN_init();
-				HCSR04_init();
+				//HCSR04_init();
 
 				Systick_add_callback_function(&process_ms);
 
@@ -74,13 +74,9 @@ void state_machine(void){
 					BuzzerOn();
 					BuzzerOff();
 				}
-				if(HCSR04_get_distance() < 350){
-					//printf("%d\n", HCSR04_get_distance());
-					MOTOR_turn_right();
-				}else{
-					MOTOR_move_forward();
-					//printf("%d\n", HCSR04_get_distance());
-				}
+				//Activation du mode auto
+				HCSR04_mode_auto();
+
 				if(c == 'A')
 					state = MODE_MANU;
 				break;
@@ -142,12 +138,15 @@ int main(void)
 	Systick_add_callback_function(&process_ms);
 	//Ajouter dans la fonction main(), juste avant la boucle while(1) de tache de fond
 	//ECRAN_init();
-	HCSR04_init();
-	MOTOR_init();
+	//HCSR04_init();
+	//MOTOR_init();
 
 	while(1)	//boucle de tâche de fond
 	{
-		HCSR04_demo_state_machine();
+		//HCSR04_demo_state_machine();
+		HCSR04_mode_auto();
+		HCSR04_get_distance(0);
+		HCSR04_process_main();
 		/*if(getDistance() < 30){
 			printf("%d\n", getDistance());
 			MOTOR_turn_right();

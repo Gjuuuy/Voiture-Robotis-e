@@ -1,4 +1,3 @@
-core_cm3.h:1762:34:__NVIC_SystemReset	4	static,ignoring_inline_asm
 testDistance.c:26:6:testFonctionnementGetDistance	8	static
 testDistance.c:36:6:testObjetDetectee	8	static
 testDistance.c:45:6:testObjetNonDetectee	8	static
