@@ -80,6 +80,7 @@ void HCSR04_init(void){
 			if(ret == HAL_OK){
 				if(distance < 100){
 					state = DETECTE;
+					printf("Detecte");
 				}
 			}
 			MOTOR_move_forward();
@@ -87,8 +88,9 @@ void HCSR04_init(void){
 
 		case DETECTE:
 			HCSR04_get_value(id_sensor, &distance);
-			if(distance > 400){
+			if(distance > 300){
 				state = START;
+				print("Non detecte");
 			}
 			MOTOR_turn_right();
 			break;

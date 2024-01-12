@@ -143,6 +143,7 @@ int main(void)
 
 	while(1)	//boucle de tâche de fond
 	{
+		//printf("hello");
 		//HCSR04_demo_state_machine();
 		HCSR04_mode_auto();
 		HCSR04_get_distance(0);
