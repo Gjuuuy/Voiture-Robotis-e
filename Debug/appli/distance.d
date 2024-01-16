@@ -23,10 +23,10 @@ appli/distance.o: ../appli/distance.c ../appli/config.h \
  ../lib/hal/inc/stm32f1xx_hal_uart.h ../lib/hal/inc/stm32f1xx_hal_usart.h \
  ../lib/hal/inc/stm32f1xx_hal_wwdg.h ../lib/hal/inc/stm32f1xx_hal_pcd.h \
  ../lib/hal/inc/stm32f1xx_ll_usb.h ../lib/hal/inc/stm32f1xx_hal_pcd_ex.h \
- ../lib/hal/inc/stm32f1xx_hal_hcd.h ../appli/HCSR04.h \
- ../lib/bsp/macro_types.h ../lib/bsp/stm32f1_timer.h \
- ../lib/bsp/macro_types.h ../appli/config.h ../lib/bsp/stm32f1_gpio.h \
- ../lib/bsp/stm32f1_extit.h ../appli/motors.h
+ ../lib/hal/inc/stm32f1xx_hal_hcd.h ../lib/bsp/macro_types.h \
+ ../lib/bsp/stm32f1_timer.h ../lib/bsp/macro_types.h ../appli/config.h \
+ ../lib/bsp/stm32f1_gpio.h ../lib/bsp/stm32f1_extit.h ../appli/HCSR04.h \
+ ../appli/motors.h ../appli/buzzer.h ../appli/ecran.h
 
 ../appli/config.h:
 
@@ -116,8 +116,6 @@ appli/distance.o: ../appli/distance.c ../appli/config.h \
 
 ../lib/hal/inc/stm32f1xx_hal_hcd.h:
 
-../appli/HCSR04.h:
-
 ../lib/bsp/macro_types.h:
 
 ../lib/bsp/stm32f1_timer.h:
@@ -130,4 +128,10 @@ appli/distance.o: ../appli/distance.c ../appli/config.h \
 
 ../lib/bsp/stm32f1_extit.h:
 
+../appli/HCSR04.h:
+
 ../appli/motors.h:
+
+../appli/buzzer.h:
+
+../appli/ecran.h:

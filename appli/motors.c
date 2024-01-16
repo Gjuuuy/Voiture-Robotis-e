@@ -53,7 +53,7 @@ void MOTOR_turn_right(void){
 
 	MOTOR_set_duty(left_motor_id, VITESSE_TOURNER);
 	MOTOR_set_duty(right_motor_id, -VITESSE_TOURNER);
-	//HAL_Delay(750);
+
 
 }
 
@@ -65,7 +65,7 @@ void MOTOR_move_forward(void){
 
 	MOTOR_set_duty(left_motor_id, VITESSE_AVANCER);
 	MOTOR_set_duty(right_motor_id, VITESSE_AVANCER);
-	//HAL_Delay(1000);
+
 
 }
 
@@ -78,7 +78,7 @@ void MOTOR_turn_left(void){
 
 	MOTOR_set_duty(left_motor_id, -VITESSE_TOURNER);
 	MOTOR_set_duty(right_motor_id, VITESSE_TOURNER);
-	//HAL_Delay(750);
+
 
 }
 
@@ -91,7 +91,7 @@ void MOTOR_stop(void){
 
 	MOTOR_set_duty(left_motor_id, VITESSE_STOP);
 	MOTOR_set_duty(right_motor_id, VITESSE_STOP);
-	//HAL_Delay(1000);
+
 
 }
 
@@ -103,6 +103,6 @@ void MOTOR_move_backward(void){
 
 	MOTOR_set_duty(left_motor_id, -VITESSE_AVANCER);
 	MOTOR_set_duty(right_motor_id, -VITESSE_AVANCER);
-	//HAL_Delay(1000);
+
 
 }

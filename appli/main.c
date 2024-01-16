@@ -19,7 +19,6 @@
 #include "ecran.h"
 #include "HCSR04.h"
 
-static uint16_t distanceMesuree;
 
 void writeLED(bool_e b)
 {
@@ -52,15 +51,15 @@ void state_machine(void){
 			entrance = (state != previous_state)?TRUE:FALSE;
 			char c;
 			previous_state = state;
-			c = UART_getc(UART2_ID);
 
+			c = UART_getc(UART2_ID);
 			switch(state){
 
 			case INIT:
 				printf("Mode initialisation\n");
-				//MOTOR_init();
+				MOTOR_init();
 				ECRAN_init();
-				//HCSR04_init();
+				HCSR04_init();
 
 				Systick_add_callback_function(&process_ms);
 
@@ -71,8 +70,6 @@ void state_machine(void){
 				if(entrance){
 					printf("Mode auto active\n");
 					//Affichage de quelque chose sur l'écran
-					BuzzerOn();
-					BuzzerOff();
 				}
 				//Activation du mode auto
 				HCSR04_mode_auto();
@@ -85,11 +82,9 @@ void state_machine(void){
 				if(entrance){
 					printf("Mode manuel");
 					//Affichage de quelque chose sur l'écran
-					BuzzerOn();
-					BuzzerOff();
 					MOTOR_stop();
 				}
-				//c = UART_getc(UART2_ID);
+
 				if(c == 'F')
 					MOTOR_move_forward();
 				else if(c == 'B')
@@ -137,25 +132,11 @@ int main(void)
 	//On ajoute la fonction process_ms à la liste des fonctions appelées automatiquement chaque ms par la routine d'interruption du périphérique SYSTICK
 	Systick_add_callback_function(&process_ms);
 	//Ajouter dans la fonction main(), juste avant la boucle while(1) de tache de fond
-	//ECRAN_init();
-	//HCSR04_init();
-	//MOTOR_init();
+
 
 	while(1)	//boucle de tâche de fond
 	{
-		//printf("hello");
-		//HCSR04_demo_state_machine();
-		HCSR04_mode_auto();
-		HCSR04_get_distance(0);
-		HCSR04_process_main();
-		/*if(getDistance() < 30){
-			printf("%d\n", getDistance());
-			MOTOR_turn_right();
-		}else{
-			MOTOR_move_forward();
-			printf("%d\n", HCSR04_get_distance());
-		}*/
-		//state_machine();
+		state_machine();
 	}
 
 

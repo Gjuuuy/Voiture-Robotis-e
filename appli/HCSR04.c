@@ -80,80 +80,75 @@ static uint32_t HCSR04_ReadTimerUs(void);
  * @post cette fonction effectue des mesures rgulires avec un capteur HCSR04 plac sur les ports PC7 (Trig) et PB6 (Echo)
  * @note cette fonction n'utilise que des fonctions publiques. Elle peut donc tre duplique  l'extrieur de ce module logiciel.
  */
-HAL_StatusTypeDef HCSR04_get_distance(uint8_t id_sensor)
+void HCSR04_demo_state_machine(void)
 {
 	typedef enum
-	{
-		INIT,
-		FAIL,
-		LAUNCH_MEASURE,
-		RUN,
-		WAIT_DURING_MEASURE,
-		WAIT_BEFORE_NEXT_MEASURE
-	}state_e;
+		{
+			INIT,
+			FAIL,
+			LAUNCH_MEASURE,
+			RUN,
+			WAIT_DURING_MEASURE,
+			WAIT_BEFORE_NEXT_MEASURE
+		}state_e;
 
-	static state_e state = INIT;
-	static uint32_t tlocal;
-	uint16_t distance;
-	HAL_StatusTypeDef ret;
-	//uint16_t distance;
+		static state_e state = INIT;
+		static uint32_t tlocal;
+		static uint8_t id_sensor;
+		uint16_t distance;
 
-	//ne pas oublier d'appeler en tche de fond cette fonction.
-	HCSR04_process_main();
+		//ne pas oublier d'appeler en tache de fond cette fonction.
+		HCSR04_process_main();
 
 
-	switch(state)
-	{
-		case INIT:
-			if(HCSR04_add(&id_sensor, GPIOA, GPIO_PIN_9, GPIOA, GPIO_PIN_8) != HAL_OK)
-			{
-				printf("HCSR04 non ajout - erreur gnante\n");
-				state = FAIL;
-			}
-			else
-			{
-				printf("HCSR04 ajout\n");
-				state = LAUNCH_MEASURE;
-			}
-			break;
-		case LAUNCH_MEASURE:
-			HCSR04_run_measure(id_sensor);
-			tlocal = HAL_GetTick();
-			state = WAIT_DURING_MEASURE;
-			break;
-		case WAIT_DURING_MEASURE:
-			ret = HCSR04_get_value(id_sensor, &distance);
-			switch(ret)
-			{
-				case HAL_BUSY:
-					//rien  faire... on attend...
-					break;
-				case HAL_OK:
-					printf("sensor %d - distance : %d\n", id_sensor, distance);
-					distance = sensors[id_sensor].distance;
-					//printf("%d\n", distanceMesure);
-					state = WAIT_BEFORE_NEXT_MEASURE;
-					break;
-				case HAL_ERROR:
-					printf("sensor %d - erreur ou mesure non lance\n", id_sensor);
-					state = WAIT_BEFORE_NEXT_MEASURE;
-					break;
+		switch(state)
+		{
+			case INIT:
+				if(HCSR04_add(&id_sensor, GPIOA, GPIO_PIN_9, GPIOA, GPIO_PIN_8) != HAL_OK)
+				{
+					printf("HCSR04 non ajoute - erreur ganante\n");
+					state = FAIL;
+				}
+				else
+				{
+					printf("HCSR04 ajoute\n");
+					state = LAUNCH_MEASURE;
+				}
+				break;
+			case LAUNCH_MEASURE:
+				HCSR04_run_measure(id_sensor);
+				tlocal = HAL_GetTick();
+				state = WAIT_DURING_MEASURE;
+				break;
+			case WAIT_DURING_MEASURE:
+				switch(HCSR04_get_value(id_sensor, &distance))
+				{
+					case HAL_BUSY:
+						//rien a faire... on attend...
+						break;
+					case HAL_OK:
+						printf("sensor %d - distance : %d\n", id_sensor, distance);
+						state = WAIT_BEFORE_NEXT_MEASURE;
+						break;
+					case HAL_ERROR:
+						printf("sensor %d - erreur ou mesure non lancee\n", id_sensor);
+						state = WAIT_BEFORE_NEXT_MEASURE;
+						break;
 
-				case HAL_TIMEOUT:
-					printf("sensor %d - timeout\n", id_sensor);
-					state = WAIT_BEFORE_NEXT_MEASURE;
-					break;
-			}
-			break;
-		case WAIT_BEFORE_NEXT_MEASURE:
-			if(HAL_GetTick() > tlocal + PERIOD_MEASURE)
-			//if(HAL_GetTick() > PERIOD_MEASURE)
-				state = LAUNCH_MEASURE;
-			break;
-		default:
-			break;
-	}
-	return ret;
+					case HAL_TIMEOUT:
+						printf("sensor %d - timeout\n", id_sensor);
+						state = WAIT_BEFORE_NEXT_MEASURE;
+						break;
+				}
+				break;
+			case WAIT_BEFORE_NEXT_MEASURE:
+				if(HAL_GetTick() > tlocal + PERIOD_MEASURE)
+					state = LAUNCH_MEASURE;
+				break;
+			default:
+				break;
+		}
+
 }
 
 /*
@@ -308,7 +303,7 @@ void HCSR04_process_main(void)
 	}
 }
 
-void HCSR04_demo_state_machine(void)
+HAL_StatusTypeDef HCSR04_get_distance(void)
 {
 	typedef enum
 	{
@@ -322,8 +317,9 @@ void HCSR04_demo_state_machine(void)
 
 	static state_e state = INIT;
 	static uint32_t tlocal;
-	static uint8_t id_sensor;
+	static uint8_t id_sensor=0;
 	uint16_t distance;
+	HAL_StatusTypeDef ret;
 
 	//ne pas oublier d'appeler en tache de fond cette fonction.
 	HCSR04_process_main();
@@ -349,13 +345,15 @@ void HCSR04_demo_state_machine(void)
 			state = WAIT_DURING_MEASURE;
 			break;
 		case WAIT_DURING_MEASURE:
-			switch(HCSR04_get_value(id_sensor, &distance))
+			ret = HCSR04_get_value(id_sensor, &distance);
+			switch(ret)
 			{
 				case HAL_BUSY:
 					//rien a faire... on attend...
 					break;
 				case HAL_OK:
-					printf("sensor %d - distance : %d\n", id_sensor, distance);
+					printf("distance : %d\n", distance);
+					distance = sensors[id_sensor].distance;
 					state = WAIT_BEFORE_NEXT_MEASURE;
 					break;
 				case HAL_ERROR:
@@ -376,6 +374,7 @@ void HCSR04_demo_state_machine(void)
 		default:
 			break;
 	}
+	return ret;
 }
 
 

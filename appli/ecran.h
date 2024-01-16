@@ -8,6 +8,8 @@
 */
 
 void ECRAN_init(void);
-void affiche_yeux(void);
-//void yeux_robot(void);
+
+void visage_yeux_bleu(void);
+
+void visage_yeux_rouges(void);
 
